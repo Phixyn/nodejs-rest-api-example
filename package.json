@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-rest-api-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example of a HTTP REST API developed with Node.js using the Express framework.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phixyn/nodejs-rest-api-example.git"
+  },
+  "author": "Alpeche Pancha",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Phixyn/nodejs-rest-api-example/issues"
+  },
+  "homepage": "https://github.com/Phixyn/nodejs-rest-api-example#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
