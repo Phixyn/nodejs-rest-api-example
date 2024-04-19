@@ -1,4 +1,4 @@
-const config = require('../../config.js');
+const config = require('../config.js');
 
 const { format } = require('logform');
 const { createLogger, transports } = require('winston');

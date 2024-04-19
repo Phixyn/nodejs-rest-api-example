@@ -1,6 +1,6 @@
 const exampleService = require('./exampleService.js');
 
-const { logger } = require('../../shared/utils/logging.js');
+const { logger } = require('../../utils/logging.js');
 
 /**
  * TODO Docs: JSDoc

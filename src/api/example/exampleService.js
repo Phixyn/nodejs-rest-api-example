@@ -1,5 +1,5 @@
 // Import as needed for future use
-// const { logger } = require('../../shared/utils/logging.js');
+// const { logger } = require('../../utils/logging.js');
 
 /**
  * TODO Docs: JSDoc

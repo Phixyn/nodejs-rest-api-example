@@ -9,8 +9,8 @@ const config = require('./config.js');
 
 const exampleRoutes = require('./api/example/exampleRoutes.js');
 
-const { logger } = require('./shared/utils/logging.js');
-const { validateEnv } = require('./shared/utils/environment.js');
+const { logger } = require('./utils/logging.js');
+const { validateEnv } = require('./utils/environment.js');
 
 const SERVER_VERSION = '1.0.0';
 
@@ -72,9 +72,8 @@ app.use((err, req, res, next) => {
 
   if (axios.isAxiosError(err)) {
     logger.error('Axios request error:');
-    // TODO Bug: See comment in ./shared/utils/logging.js for why we
-    // have to make a separate object here with "messageText" instead
-    // of "message"
+    // TODO Bug: See comment in ./utils/logging.js for why we have to make a
+    // separate object here with "messageText" instead of "message".
     logger.error({
       status: err.response.status,
       statusText: err.response.statusText,
