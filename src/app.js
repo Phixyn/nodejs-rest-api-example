@@ -7,7 +7,7 @@ const morgan = require('morgan');
 
 const config = require('./config.js');
 
-const exampleRoutes = require('./api/example/exampleRoutes.js');
+const exampleRoutes = require('./routes/exampleRoutes.js');
 
 const { logger } = require('./utils/logging.js');
 const { validateEnv } = require('./utils/environment.js');
@@ -50,7 +50,7 @@ app.use(
   })
 );
 
-// If you need CORS handling. Additional setup might be necessary.
+// If you need CORS handling. Additional setup may be necessary.
 // app.use(cors());
 
 app.use('/api/v1/example', exampleRoutes);

@@ -1,6 +1,6 @@
-const exampleService = require('./exampleService.js');
+const exampleService = require('../services/exampleService.js');
 
-const { logger } = require('../../utils/logging.js');
+const { logger } = require('../utils/logging.js');
 
 /**
  * TODO Docs: JSDoc
