@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const axios = require('axios');
 // const cors = require("cors");
+// const cookieParser = require('cookie-parser');
 const express = require('express');
 const morgan = require('morgan');
 
@@ -52,6 +53,7 @@ app.use(
 
 // If you need CORS handling. Additional setup may be necessary.
 // app.use(cors());
+// app.use(cookieParser());
 
 app.use('/api/v1/example', exampleRoutes);
 
@@ -78,7 +80,7 @@ app.use((err, req, res, next) => {
       status: err.response.status,
       statusText: err.response.statusText,
       messageText: err.message,
-      requestURL: err.response.config.url,
+      requestURL: err.config.url,
       data: err.response.data,
     });
 
@@ -86,7 +88,7 @@ app.use((err, req, res, next) => {
       status: err.response.status,
       statusText: err.response.statusText,
       message: err.message,
-      requestURL: err.response.config.url,
+      requestURL: err.config.url,
       data: err.response.data,
     };
   } else {
